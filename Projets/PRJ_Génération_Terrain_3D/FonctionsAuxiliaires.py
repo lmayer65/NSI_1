@@ -18,7 +18,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 
 # Interpolation classique linéaire
-def interpolationLinéaire(val1, val2, n, ecart) :
+def interpolationLineaire(val1, val2, n, ecart) :
     if n!=0 :
         return val1 + ecart*(val2-val1)/n
     else :
@@ -66,12 +66,12 @@ def doubleInterpolation(i,j,taille,freqCour,tBaseCalque,choixCubique) :
     val01 = tBaseCalque[xMin][yMax]
     val10 = tBaseCalque[xMax][yMin]
     val11 = tBaseCalque[xMax][yMax]
-    valeurInferieure = interpolationLinéaire(val00, val01, yMax - yMin, j - yMin)
-    valeurSuperieure  = interpolationLinéaire(val10, val11, yMax - yMin, j - yMin)
+    valeurInferieure = interpolationLineaire(val00, val01, yMax - yMin, j - yMin)
+    valeurSuperieure  = interpolationLineaire(val10, val11, yMax - yMin, j - yMin)
     if choixCubique :
         valeurFinale = interpolationCubique(valeurInferieure, valeurSuperieure, xMax - xMin , i - xMin)
     else:
-        valeurFinale = interpolationLinéaire(valeurInferieure, valeurSuperieure, xMax - xMin , i - xMin)
+        valeurFinale = interpolationLineaire(valeurInferieure, valeurSuperieure, xMax - xMin , i - xMin)
     return valeurFinale
 
 
