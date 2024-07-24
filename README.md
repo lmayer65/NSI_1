@@ -1,4 +1,4 @@
-Programme de NSI de Premières du lycée Saint-Jean à Limoges
+Programme de NSI de Première du lycée Saint-Jean à Limoges
 
 Cours
 Exercices et corrigés
