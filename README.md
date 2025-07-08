@@ -1,6 +1,6 @@
-NSI_1
+## <b>NSI_1</b>
 
-Programme de NSI de Première du lycée Saint-Jean à Limoges :
+Programme de **NSI de Première du lycée Saint-Jean** à Limoges :
 
 - Cours
 - Exercices et corrigés
