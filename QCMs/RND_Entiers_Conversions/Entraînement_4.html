@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>QCM_S2_RND_Entiers_Relatifs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root{
+    --bg:#0f172a; --panel:#111827; --ink:#e5e7eb; --muted:#94a3b8;
+    --accent:#60a5fa; --good:#10b981;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; padding:48px 20px; font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; color:var(--ink);
+       background: radial-gradient(1200px 600px at 10% -10%, #1f2937 0%, #0b1220 50%, #050a17 100%);}
+  .page{max-width:900px; margin:0 auto;}
+  header h1{margin:0 0 .25rem; font-size:clamp(22px,4vw,34px)}
+  header p{margin:.25rem 0 1.25rem; color:var(--muted)}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+        border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:22px 20px; margin:14px 0;
+        box-shadow:0 10px 25px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.05);}
+  .q{display:grid; grid-template-columns:auto 1fr; gap:.6rem .75rem;}
+  .q > .num{width:46px; height:46px; border-radius:12px; display:grid; place-items:center;
+            background:linear-gradient(180deg, #1b2a44, #132136);
+            border:1px solid rgba(96,165,250,.35); color:#cde3ff; font-weight:700;}
+  .q h3{margin:.2rem 0 .6rem; font-size:18px}
+  ul.choices{list-style:none; margin:.25rem 0 0; padding:0; display:grid; gap:.3rem}
+  .choices li{padding:.45rem .65rem; border:1px solid rgba(255,255,255,.10); border-radius:10px; background:rgba(255,255,255,.02)}
+  .choices code{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
+  hr.sep{margin:28px 0; border:0; height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent)}
+  .answers{break-before:page; margin-top:32px}
+  .answers h2{margin:.2rem 0 1rem}
+  .answers .badge{display:inline-block; padding:.18rem .55rem; border-radius:999px; background:rgba(16,185,129,.18);
+                  color:var(--good); border:1px solid rgba(16,185,129,.35); font-weight:700}
+  @media print{
+    body{background:#fff; color:#111}
+    .card{box-shadow:none; background:#fff; border-color:#ddd}
+    .q > .num{background:#eef6ff; color:#0a58ca; border-color:#b6daff}
+    .answers .badge{background:#e8f8f1; color:#066e3a; border-color:#9fe3c8}
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>QCM_S2_RND_Entiers_Relatifs</h1>
+      <p>Consigne : <em>Entourer la bonne réponse.</em></p>
+    </header>
+
+    <!-- Q1 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.1</div>
+        <div>
+          <h3>Quelle est la représentation en binaire de l'entier 64 sur un octet ?</h3>
+          <ul class="choices">
+            <li>A — <code>0101&nbsp;0000</code></li>
+            <li>B — <code>1100&nbsp;0100</code></li>
+            <li>C — <code>0100&nbsp;0000</code></li>
+            <li>D — <code>0000&nbsp;1100</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q2 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.2</div>
+        <div>
+          <h3>Comment s'écrit en base 16 (hexadécimal) le nombre dont l'écriture binaire est <code>0010&nbsp;1100</code> ?</h3>
+          <ul class="choices">
+            <li>A — <code>1D</code></li>
+            <li>B — <code>2C</code></li>
+            <li>C — <code>3C</code></li>
+            <li>D — <code>3E</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q3 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.3</div>
+        <div>
+          <h3>Quelle est la représentation hexadécimale de l'entier qui s'écrit <code>106</code> en base 10 ?</h3>
+          <ul class="choices">
+            <li>A — <code>6A</code></li>
+            <li>B — <code>A6</code></li>
+            <li>C — <code>64</code></li>
+            <li>D — <code>46</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q4 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.4</div>
+        <div>
+          <h3>Quelle est l'écriture décimale de l'entier positif dont l'écriture hexadécimale est <code>3F</code> ?</h3>
+          <ul class="choices">
+            <li>A — 18</li>
+            <li>B — 45</li>
+            <li>C — 63</li>
+            <li>D — 315</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q5 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.5</div>
+        <div>
+          <h3>Quelle est, en écriture décimale, la somme des entiers dont l'écriture en base 16 est <code>2A + 2</code> ?</h3>
+          <ul class="choices">
+            <li>A — 22</li>
+            <li>B — 31</li>
+            <li>C — 49</li>
+            <li>D — 44</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q6 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.6</div>
+        <div>
+          <h3>Quelle est la valeur binaire (complément à 2 sur 8 bits) de l’entier négatif <code>−42</code> ?</h3>
+          <ul class="choices">
+            <li>A — <code>−0010&nbsp;1010</code></li>
+            <li>B — <code>0010&nbsp;1010</code></li>
+            <li>C — <code>1101&nbsp;0101</code></li>
+            <li>D — <code>1101&nbsp;0110</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q7 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.7</div>
+        <div>
+          <h3>À quoi sert le codage en complément à 2 ?</h3>
+          <ul class="choices">
+            <li>A — à inverser un nombre binaire</li>
+            <li>B — à coder des nombres entiers négatifs en binaire</li>
+            <li>C — à convertir un nombre en hexadécimal</li>
+            <li>D — à multiplier par 2 un nombre en binaire</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q8 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.8</div>
+        <div>
+          <h3>On rappelle que <code>12</code> s’écrit <code>0000&nbsp;1100</code> en base 2 (sur 8 bits). Quel est le codage en complément à 2 de <code>−12</code> (sur 8 bits) ?</h3>
+          <ul class="choices">
+            <li>A — <code>−0000&nbsp;1100</code></li>
+            <li>B — <code>1000&nbsp;1100</code></li>
+            <li>C — <code>1111&nbsp;0100</code></li>
+            <li>D — <code>1111&nbsp;0011</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q9 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.9</div>
+        <div>
+          <h3>Quelle est l'écriture binaire (complément à 2 sur 8 bits) de l'entier négatif <code>−108</code> ?</h3>
+          <ul class="choices">
+            <li>A — <code>1000&nbsp;1000</code></li>
+            <li>B — <code>0110&nbsp;1100</code></li>
+            <li>C — <code>1001&nbsp;0100</code></li>
+            <li>D — <code>1110&nbsp;1100</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q10 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.10</div>
+        <div>
+          <h3>Quelle est la séquence de bits qui représente <code>−25</code> en complément à 2 sur 8 bits ?</h3>
+          <ul class="choices">
+            <li>A — <code>0001&nbsp;1001</code></li>
+            <li>B — <code>0001&nbsp;1010</code></li>
+            <li>C — <code>1110&nbsp;0110</code></li>
+            <li>D — <code>1110&nbsp;0111</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="sep" />
+
+    <section class="answers card">
+      <h2>Corrigé <span class="badge">réponses correctes</span></h2>
+      <p><strong>Q1 → C</strong> &nbsp;|&nbsp; <strong>Q2 → B</strong> &nbsp;|&nbsp; <strong>Q3 → A</strong> &nbsp;|&nbsp; <strong>Q4 → C</strong> &nbsp;|&nbsp; <strong>Q5 → D</strong><br/>
+         <strong>Q6 → D</strong> &nbsp;|&nbsp; <strong>Q7 → B</strong> &nbsp;|&nbsp; <strong>Q8 → C</strong> &nbsp;|&nbsp; <strong>Q9 → C</strong> &nbsp;|&nbsp; <strong>Q10 → D</strong></p>
+      <p style="color:var(--muted); font-size:.95rem; margin-top:.6rem">
+        Vérif. rapide : 64 → <code>0100&nbsp;0000</code> ; <code>0010&nbsp;1100</code> → 2C ; 106 → 6A ; 3F₁₆ = 63 ; 2A₁₆ (42) + 2 = 44 ;<br>
+        −42 : <code>0010&nbsp;1010</code> → inversion <code>1101&nbsp;0101</code> + 1 → <code>1101&nbsp;0110</code> ; −12 → <code>1111&nbsp;0100</code> ; −108 → <code>1001&nbsp;0100</code> ; −25 → <code>1110&nbsp;0111</code>.
+      </p>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>QCM_S1_RND_Entiers_Relatifs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root{
+    --bg:#0f172a;          /* slate-900 */
+    --panel:#111827;       /* gray-900 */
+    --card:#111827;
+    --ink:#e5e7eb;         /* gray-200 */
+    --muted:#94a3b8;       /* slate-400 */
+    --accent:#60a5fa;      /* blue-400 */
+    --good:#10b981;        /* emerald-500 */
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:48px 20px; font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+    color:var(--ink); background: radial-gradient(1200px 600px at 10% -10%, #1f2937 0%, #0b1220 50%, #050a17 100%);
+  }
+  .page{max-width:900px; margin:0 auto;}
+  header h1{margin:0 0 .25rem; font-size:clamp(22px,4vw,34px); letter-spacing:.3px}
+  header p{margin:.25rem 0 1.25rem; color:var(--muted)}
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px; padding:22px 20px; margin:14px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.05);
+  }
+  .q{
+    display:grid; grid-template-columns:auto 1fr; gap:.6rem .75rem;
+  }
+  .q > .num{
+    width:46px; height:46px; border-radius:12px; display:grid; place-items:center;
+    background:linear-gradient(180deg, #1b2a44, #132136);
+    border:1px solid rgba(96,165,250,.35); color:#cde3ff; font-weight:700;
+  }
+  .q h3{margin:.2rem 0 .6rem; font-size:18px}
+  ul.choices{list-style:none; margin:.25rem 0 0; padding:0; display:grid; gap:.3rem}
+  .choices li{
+    padding:.45rem .65rem; border:1px solid rgba(255,255,255,.10);
+    border-radius:10px; background:rgba(255,255,255,.02);
+  }
+  .choices code{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
+  hr.sep{margin:28px 0; border:0; height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent)}
+  .answers{break-before:page; margin-top:32px}
+  .answers h2{margin:.2rem 0 1rem}
+  .answers .badge{
+    display:inline-block; padding:.18rem .55rem; border-radius:999px; background:rgba(16,185,129,.18); color:var(--good); border:1px solid rgba(16,185,129,.35); font-weight:700
+  }
+  @media print{
+    body{background:#fff; color:#111}
+    .card{box-shadow:none; background:#fff; border-color:#ddd}
+    .q > .num{background:#eef6ff; color:#0a58ca; border-color:#b6daff}
+    .answers .badge{background:#e8f8f1; color:#066e3a; border-color:#9fe3c8}
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>QCM_S1_RND_Entiers_Relatifs</h1>
+      <p>Consigne : <em>Entourer la bonne réponse.</em></p>
+    </header>
+
+    <!-- Q1 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.1</div>
+        <div>
+          <h3>Quelle est la représentation binaire du nombre entier 173 ?</h3>
+          <ul class="choices">
+            <li>A — <code>1010&nbsp;1101</code></li>
+            <li>B — <code>1011&nbsp;0101</code></li>
+            <li>C — <code>1011&nbsp;0100</code></li>
+            <li>D — <code>1011&nbsp;1101</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q2 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.2</div>
+        <div>
+          <h3>Parmi les quatre propositions, quelle est celle qui correspond au résultat de l'addition en écriture binaire <code>1101&nbsp;1001 + 11&nbsp;0110</code> ?</h3>
+          <ul class="choices">
+            <li>A — <code>1000&nbsp;1111</code></li>
+            <li>B — <code>10&nbsp;0000&nbsp;1111</code></li>
+            <li>C — <code>1&nbsp;0000&nbsp;1111</code></li>
+            <li>D — <code>1&nbsp;1000&nbsp;0111</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q3 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.3</div>
+        <div>
+          <h3>Soit <em>n</em> l'entier positif dont l'écriture binaire est <code>10001</code>. Quelle est l'écriture binaire de l'entier <code>2n</code> ?</h3>
+          <ul class="choices">
+            <li>A — <code>20002</code></li>
+            <li>B — <code>100010</code></li>
+            <li>C — <code>010001</code></li>
+            <li>D — <code>1000110001</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q4 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.4</div>
+        <div>
+          <h3>Combien de nombres entiers positifs peut-on coder en binaire sur 4 bits ?</h3>
+          <ul class="choices">
+            <li>A — 4</li>
+            <li>B — 16</li>
+            <li>C — 64</li>
+            <li>D — 256</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q5 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.5</div>
+        <div>
+          <h3>La couleur « bleu roi » a pour code RGB <code>(65,105,225)</code>, sa représentation en hexadécimal est :</h3>
+          <ul class="choices">
+            <li>A — <code>(28,52,C2)</code></li>
+            <li>B — <code>(41,69,E1)</code></li>
+            <li>C — <code>(33,A5,C61)</code></li>
+            <li>D — <code>(C3,A6,22)</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q6 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.6</div>
+        <div>
+          <h3>L'écriture décimale du nombre <code>1001&nbsp;1101</code> écrit sur 8 bits en complément à 2 est :</h3>
+          <ul class="choices">
+            <li>A — –4</li>
+            <li>B — –29</li>
+            <li>C — –99</li>
+            <li>D — 157</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q7 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.7</div>
+        <div>
+          <h3>Quelle est la représentation binaire sur un octet (8 bits) de l'entier <code>−26</code> ?</h3>
+          <ul class="choices">
+            <li>A — <code>-001&nbsp;1010</code></li>
+            <li>B — <code>1110&nbsp;0100</code></li>
+            <li>C — <code>1110&nbsp;0101</code></li>
+            <li>D — <code>1110&nbsp;0110</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q8 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.8</div>
+        <div>
+          <h3>Un entier positif est représenté sur 8 bits par <code>0001&nbsp;0110</code>. En utilisant le complément à 2, quelle est la représentation sur 8 bits de son opposé ?</h3>
+          <ul class="choices">
+            <li>A — <code>1001&nbsp;0110</code></li>
+            <li>B — <code>1110&nbsp;1001</code></li>
+            <li>C — <code>1110&nbsp;1010</code></li>
+            <li>D — <code>1001&nbsp;0111</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q9 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.9</div>
+        <div>
+          <h3>Quelle est l'écriture binaire, en complément à 2 sur 8 bits, du nombre entier négatif <code>−13</code> ?</h3>
+          <ul class="choices">
+            <li>A — <code>-0111&nbsp;0010</code></li>
+            <li>B — <code>-0000&nbsp;1101</code></li>
+            <li>C — <code>1111&nbsp;0010</code></li>
+            <li>D — <code>1111&nbsp;0011</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q10 -->
+    <section class="card">
+      <div class="q">
+        <div class="num">Q.10</div>
+        <div>
+          <h3>Quelle est la représentation binaire en complément à deux sur huit bits du nombre <code>−3</code> ?</h3>
+          <ul class="choices">
+            <li>A — <code>1000&nbsp;0011</code></li>
+            <li>B — <code>1111&nbsp;1100</code></li>
+            <li>C — <code>1111&nbsp;1101</code></li>
+            <li>D — <code>1&nbsp;0000&nbsp;0011</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="sep" />
+
+    <section class="answers card">
+      <h2>Corrigé <span class="badge">réponses officielles</span></h2>
+      <p><strong>Q1 → A</strong> &nbsp;|&nbsp; <strong>Q2 → C</strong> &nbsp;|&nbsp; <strong>Q3 → B</strong> &nbsp;|&nbsp; <strong>Q4 → B</strong> &nbsp;|&nbsp; <strong>Q5 → B</strong><br/>
+         <strong>Q6 → C</strong> &nbsp;|&nbsp; <strong>Q7 → D</strong> &nbsp;|&nbsp; <strong>Q8 → C</strong> &nbsp;|&nbsp; <strong>Q9 → D</strong> &nbsp;|&nbsp; <strong>Q10 → C</strong></p>
+      <p style="color:var(--muted); font-size:.95rem; margin-top:.6rem">
+        Vérifications rapides : 173<sub>10</sub> = <code>1010&nbsp;1101</code> ; 217 + 54 = 271 = <code>1&nbsp;0000&nbsp;1111</code> ; décalage gauche : <code>10001 → 100010</code> ; 4 bits ⇒ 2⁴ = 16 valeurs ; (65,105,225) ⇒ (<code>41,69,E1</code>) ;<br>
+        complément à 2 : <code>1001&nbsp;1101</code> = −99 ; −26 ⇒ <code>1110&nbsp;0110</code> ; 22 ⇒ opposé <code>1110&nbsp;1010</code> ; −13 ⇒ <code>1111&nbsp;0011</code> ; −3 ⇒ <code>1111&nbsp;1101</code>.
+      </p>
+    </section>
+  </div>
+</body>
+</html>
