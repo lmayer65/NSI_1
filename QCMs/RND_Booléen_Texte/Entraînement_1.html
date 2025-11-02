@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QCM_S1_RND_Booléens_Texte</title>
+<style>
+  :root { --ink:#222; --muted:#666; --accent:#0a7; }
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"; color:var(--ink); line-height:1.5; margin:2rem; }
+  h1 { margin-top:0; }
+  .instr { color:var(--muted); font-style:italic; margin-bottom:1.25rem; }
+  ol.qcm { counter-reset: q; padding-left:0; }
+  li.q { list-style:none; margin:1.25rem 0 1.75rem; }
+  li.q > h3::before { counter-increment:q; content:"Q." counter(q) " – "; color:var(--accent); }
+  li.q h3 { margin:.25rem 0 .5rem; }
+  ul.choices { margin:.25rem 0 0 0; padding:0; }
+  ul.choices li { list-style:none; padding:.25rem 0; }
+  ul.choices li::before { content: attr(data-label) " "; font-weight:600; display:inline-block; width:2ch; }
+  pre, code { background:#f6f8fa; border:1px solid #e5e7eb; border-radius:6px; }
+  pre { padding:.75rem; overflow:auto; }
+  table.truth { border-collapse:collapse; margin:.25rem 0 0; }
+  table.truth th, table.truth td { border:1px solid #ddd; padding:.4rem .6rem; text-align:center; }
+  hr { margin:2rem 0; }
+  .answers li::before { content: attr(data-q) " "; font-weight:700; width:5ch; display:inline-block; }
+  /* ===== Impression : empêcher les coupures de questions ===== */
+  @media print {
+    li.q,
+    li.q * { page-break-inside: avoid; break-inside: avoid; }
+    table.truth, pre { page-break-inside: avoid; break-inside: avoid; }
+    h2#reponses { page-break-before: always; break-before: page; }
+    /* marges d’impression propres */
+    @page { margin: 18mm 16mm; }
+  }
+</style>
+</head>
+<body>
+
+<h1>QCM – Booléens et encodage du texte</h1>
+<p class="instr">Entourer la bonne réponse.</p>
+
+<ol class="qcm">
+  <!-- Q1 -->
+  <li class="q">
+    <h3>Parmi les quatre expressions suivantes, laquelle s'évalue en <code>True</code> ?</h3>
+    <ul class="choices">
+      <li data-label="A."><code>False and (True and False)</code></li>
+      <li data-label="B."><code>False or (True and False)</code></li>
+      <li data-label="C."><code>True and (True and False)</code></li>
+      <li data-label="D."><code>True or (True and False)</code></li>
+    </ul>
+  </li>
+
+  <!-- Q2 -->
+  <li class="q">
+    <h3>On considère l'extrait de code suivant : quelles conditions permettent de mettre fin à cette boucle&nbsp;?</h3>
+    <pre><code>while (a &lt; 20) or (b &gt; 50):
+    ......
+    ......</code></pre>
+    <ul class="choices">
+      <li data-label="A.">la boucle prend fin lorsque <code>a &lt; 20</code> ou <code>b &gt; 50</code></li>
+      <li data-label="B.">la boucle prend fin lorsque <code>a &lt; 20</code> et <code>b &gt; 50</code></li>
+      <li data-label="C.">la boucle prend fin lorsque <code>a &gt;= 20</code> ou <code>b &lt;= 50</code></li>
+      <li data-label="D.">la boucle prend fin lorsque <code>a &gt;= 20</code> et <code>b &lt;= 50</code></li>
+    </ul>
+  </li>
+
+  <!-- Q3 -->
+  <li class="q">
+    <h3>La variable <code>x</code> contient la valeur <code>3</code>, la variable <code>y</code> contient la valeur <code>4</code>. Quelle expression s'évalue en <code>True</code> parmi les quatre propositions suivantes&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A."><code>x == 3 or y == 5</code></li>
+      <li data-label="B."><code>x == 3 and y == 5</code></li>
+      <li data-label="C."><code>x != 3 or y == 5</code></li>
+      <li data-label="D."><code>y &lt; 4</code></li>
+    </ul>
+  </li>
+
+  <!-- Q4 -->
+  <li class="q">
+    <h3>À quel opérateur logique correspond la table de vérité suivante&nbsp;?</h3>
+    <table class="truth" aria-label="Table de vérité">
+      <thead><tr><th>A</th><th>B</th><th>Résultat</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>1</td><td>0</td></tr>
+      </tbody>
+    </table>
+    <ul class="choices">
+      <li data-label="A.">AND</li>
+      <li data-label="B.">OR</li>
+      <li data-label="C.">XOR</li>
+      <li data-label="D.">NOT</li>
+    </ul>
+  </li>
+
+  <!-- Q5 -->
+  <li class="q">
+    <h3>L’expression équivalente à <code>NOT(A AND B)</code> est&nbsp;:</h3>
+    <ul class="choices">
+      <li data-label="A."><code>NOT A OR NOT B</code></li>
+      <li data-label="B."><code>NOT A AND B</code></li>
+      <li data-label="C."><code>A AND NOT B</code></li>
+      <li data-label="D."><code>NOT A AND NOT B</code></li>
+    </ul>
+  </li>
+
+  <!-- Q6 -->
+  <li class="q">
+    <h3>Le code ASCII permet de représenter en binaire les caractères alphanumériques. Quel est son principal inconvénient&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A.">Il utilise beaucoup de bits.</li>
+      <li data-label="B.">Il ne différencie pas les majuscules des minuscules.</li>
+      <li data-label="C.">Il ne représente pas les caractères accentués.</li>
+      <li data-label="D.">Il n'est pas compatible avec la plupart des systèmes informatiques.</li>
+    </ul>
+  </li>
+
+  <!-- Q7 -->
+  <li class="q">
+    <h3>On considère les codes ASCII en écriture hexadécimale (base 16). Le code ASCII de la lettre <code>A</code> est <code>0x41</code>, celui de <code>B</code> est <code>0x42</code>, celui de <code>C</code> est <code>0x43</code>, etc. Quel est le code ASCII, en hexadécimal, de la lettre <code>X</code> (24<sup>e</sup> lettre) ?</h3>
+    <ul class="choices">
+      <li data-label="A."><code>0x58</code></li>
+      <li data-label="B."><code>0x64</code></li>
+      <li data-label="C."><code>0x7A</code></li>
+      <li data-label="D."><code>0x88</code></li>
+    </ul>
+  </li>
+
+  <!-- Q8 -->
+  <li class="q">
+    <h3>Parmi les noms suivants, lequel <strong>n'est pas</strong> celui d'une méthode d'encodage des caractères&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A.">UTF-16</li>
+      <li data-label="B.">ASCII</li>
+      <li data-label="C.">Arial</li>
+      <li data-label="D.">Unicode</li>
+    </ul>
+  </li>
+
+  <!-- Q9 -->
+  <li class="q">
+    <h3>Sur une page web, on lit : «&nbsp;En consÃ©quence, l'AssemblÃ©e Nationale reconnaÃ®t et dÃ©clare, en prÃ©sence [...]&nbsp;». Quelle peut être la cause de ces affichages étranges&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A.">l'encodage des caractères n'est pas celui attendu par le navigateur</li>
+      <li data-label="B.">le texte original est en japonais</li>
+      <li data-label="C.">la taille des caractères n'est pas celle attendue par le navigateur</li>
+      <li data-label="D.">la connexion à Internet présente des coupures</li>
+    </ul>
+  </li>
+
+  <!-- Q10 -->
+  <li class="q">
+    <h3>Quel est le nombre minimum de bits qui permet de représenter les 26 lettres majuscules de l'alphabet&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A.">4</li>
+      <li data-label="B.">5</li>
+      <li data-label="C.">25</li>
+      <li data-label="D.">26</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="reponses">Réponses</h2>
+<ol class="answers">
+  <li data-q="Q1.">D</li>
+  <li data-q="Q2.">D</li>
+  <li data-q="Q3.">A</li>
+  <li data-q="Q4.">C</li>
+  <li data-q="Q5.">A</li>
+  <li data-q="Q6.">C</li>
+  <li data-q="Q7.">A</li>
+  <li data-q="Q8.">C</li>
+  <li data-q="Q9.">A</li>
+  <li data-q="Q10.">B</li>
+</ol>
+
+</body>
+</html>

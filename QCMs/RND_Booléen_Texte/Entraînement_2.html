@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QCM – Booléens & Codage du texte (S1)</title>
+<style>
+  :root { --ink:#222; --muted:#666; --accent:#0a7; }
+  body { font-family: system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans"; color:var(--ink); line-height:1.5; margin:2rem; }
+  h1 { margin-top:0; }
+  .instr { color:var(--muted); font-style:italic; margin-bottom:1.25rem; }
+  ol.qcm { counter-reset:q; padding-left:0; }
+  li.q { list-style:none; margin:1.25rem 0 1.75rem; }
+  li.q > h3::before { counter-increment:q; content:"Q." counter(q) " – "; color:var(--accent); }
+  li.q h3 { margin:.25rem 0 .5rem; }
+  ul.choices { margin:.25rem 0 0 0; padding:0; }
+  ul.choices li { list-style:none; padding:.25rem 0; }
+  ul.choices li::before { content: attr(data-label) " "; font-weight:600; display:inline-block; width:2ch; }
+  table.truth { border-collapse:collapse; margin:.5rem 0 0; }
+  table.truth th, table.truth td { border:1px solid #ddd; padding:.4rem .6rem; text-align:center; }
+  hr { margin:2rem 0; }
+  .answers li::before { content: attr(data-q) " "; font-weight:700; width:5ch; display:inline-block; }
+  /* Impression : éviter les coupures et forcer le saut avant "Réponses" */
+  @media print {
+    li.q, li.q * { page-break-inside: avoid; break-inside: avoid; }
+    table.truth, pre { page-break-inside: avoid; break-inside: avoid; }
+    h2#reponses { page-break-before: always; break-before: page; }
+    @page { margin: 18mm 16mm; }
+  }
+</style>
+</head>
+<body>
+
+<h1>QCM – Booléens et encodage du texte</h1>
+<p class="instr">Entourer la bonne réponse.</p>
+
+<ol class="qcm">
+  <!-- Q1 -->
+  <li class="q">
+    <h3>Quelle expression logique est représentée par la table de vérité suivante&nbsp;?</h3>
+    <table class="truth" aria-label="Table de vérité">
+      <thead><tr><th>A</th><th>B</th><th>Résultat</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>0</td><td>1</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td></tr>
+        <tr><td>1</td><td>0</td><td>0</td></tr>
+        <tr><td>1</td><td>1</td><td>0</td></tr>
+      </tbody>
+    </table>
+    <ul class="choices">
+      <li data-label="A.">A ou (non B)</li>
+      <li data-label="B.">(non A) ou B</li>
+      <li data-label="C.">(non A) ou (non B)</li>
+      <li data-label="D.">non (A ou B)</li>
+    </ul>
+  </li>
+
+  <!-- Q2 -->
+  <li class="q">
+    <h3>Si <code>a</code> vaut <code>False</code> et <code>b</code> vaut <code>True</code>, que vaut l’expression booléenne <code>NOT(a AND b)</code>&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A.">0</li>
+      <li data-label="B.">False</li>
+      <li data-label="C.">True</li>
+      <li data-label="D.">None</li>
+    </ul>
+  </li>
+
+  <!-- Q3 -->
+  <li class="q">
+    <h3>Parmi les quatre expressions suivantes, laquelle s'évalue en <code>True</code>&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A."><code>False and (True and False)</code></li>
+      <li data-label="B."><code>False or (True and False)</code></li>
+      <li data-label="C."><code>True and (True and False)</code></li>
+      <li data-label="D."><code>True or (True and False)</code></li>
+    </ul>
+  </li>
+
+  <!-- Q4 -->
+  <li class="q">
+    <h3>L’expression équivalente à <code>NOT(A OR B)</code> est&nbsp;:</h3>
+    <ul class="choices">
+      <li data-label="A."><code>NOT A OR NOT B</code></li>
+      <li data-label="B."><code>NOT A AND B</code></li>
+      <li data-label="C."><code>A AND NOT B</code></li>
+      <li data-label="D."><code>NOT A AND NOT B</code></li>
+    </ul>
+  </li>
+
+  <!-- Q5 -->
+  <li class="q">
+    <h3>On doit tester quatre variables booléennes. Combien de lignes doit-on écrire dans la table de vérité correspondante pour évaluer toutes les issues&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A.">4</li>
+      <li data-label="B.">8</li>
+      <li data-label="C.">12</li>
+      <li data-label="D.">16</li>
+    </ul>
+  </li>
+
+  <!-- Q6 -->
+  <li class="q">
+    <h3>Quel est le nombre minimum de bits qui permet de représenter les 26 lettres minuscules <em>et</em> majuscules de l'alphabet&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A.">5</li>
+      <li data-label="B.">6</li>
+      <li data-label="C.">51</li>
+      <li data-label="D.">52</li>
+    </ul>
+  </li>
+
+  <!-- Q7 -->
+  <li class="q">
+    <h3>Quel est un avantage du codage UTF-8 par rapport au codage ASCII&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A.">il permet de coder un caractère sur un octet au lieu de deux.</li>
+      <li data-label="B.">il permet de coder les majuscules.</li>
+      <li data-label="C.">il permet de coder tous les caractères.</li>
+      <li data-label="D.">il permet de coder différentes polices de caractères.</li>
+    </ul>
+  </li>
+
+  <!-- Q8 -->
+  <li class="q">
+    <h3>Laquelle de ces affirmations concernant le codage UTF-8 des caractères est vraie&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A.">le codage UTF-8 est sur 7 bits.</li>
+      <li data-label="B.">le codage UTF-8 est sur 8 bits.</li>
+      <li data-label="C.">le codage UTF-8 est sur 1 à 4 octets.</li>
+      <li data-label="D.">le codage UTF-8 est sur 8 octets.</li>
+    </ul>
+  </li>
+
+  <!-- Q9 -->
+  <li class="q">
+    <h3>Parmi les caractères ci-dessous, lequel ne fait pas partie du code ASCII&nbsp;?</h3>
+    <ul class="choices">
+      <li data-label="A."><code>a</code></li>
+      <li data-label="B."><code>B</code></li>
+      <li data-label="C."><code>@</code></li>
+      <li data-label="D."><code>é</code></li>
+    </ul>
+  </li>
+
+  <!-- Q10 -->
+  <li class="q">
+    <h3>Olivier visite son site préféré pour relire le programme de NSI. Son navigateur affiche :</h3>
+    <blockquote style="margin:.5rem 0; color:#444;">Lâ€™enseignement de spÃ©cialitÃ© de numÃ©rique et sciences informatiques du cycle terminal de la voie gÃ©nÃ©rale vise lâ€™appropriation des fondements de lâ€™informatique pour prÃ©parer les Ã©lÃ¨ves Ã&nbsp; une poursuite dâ€™Ã©tudes dans lâ€™enseignement supÃ©rieur, en les formant Ã&nbsp; la pratique dâ€™une dÃ©marche scientifique et en dÃ©veloppant leur appÃ©tence pour des activitÃ©s de recherche.</blockquote>
+    <p>Quel type d’encodage doit-il choisir pour afficher correctement le texte&nbsp;?</p>
+    <ul class="choices">
+      <li data-label="A.">ANSI</li>
+      <li data-label="B.">LATIN-1</li>
+      <li data-label="C.">UTF-8</li>
+      <li data-label="D.">ASCII</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="reponses">Réponses</h2>
+<ol class="answers">
+  <li data-q="Q1.">D</li>
+  <li data-q="Q2.">C</li>
+  <li data-q="Q3.">D</li>
+  <li data-q="Q4.">D</li>
+  <li data-q="Q5.">D</li>
+  <li data-q="Q6.">B</li>
+  <li data-q="Q7.">C</li>
+  <li data-q="Q8.">C</li>
+  <li data-q="Q9.">D</li>
+  <li data-q="Q10.">C</li>
+</ol>
+
+</body>
+</html>
