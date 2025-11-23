@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>QCM S2 – Listes (NSI Première)</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      margin: 20px;
+      background: #fafafa;
+      color: #111;
+    }
+    h1{ font-size: 1.6rem; margin-bottom: 0.2rem; }
+    .subtitle{ margin-top: 0; color:#444; }
+    .qcm{
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:10px;
+      padding:16px 18px;
+      margin:14px 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .q-title{ font-weight: bold; margin-bottom: 8px; }
+    .choices label{
+      display:block;
+      padding:6px 8px;
+      margin:4px 0;
+      border-radius:6px;
+      cursor:pointer;
+    }
+    .choices label:hover{ background:#f1f5ff; }
+    .corrige{
+      margin-top: 24px;
+      padding: 12px 14px;
+      background: #eef7ee;
+      border: 1px solid #cde8cd;
+      border-radius: 8px;
+    }
+    .small{ font-size: 0.95rem; color:#333; }
+    pre{ background:#f6f6f6; padding:8px 10px; border-radius:6px; overflow:auto;}
+    code{ font-family: "Consolas","Courier New",monospace; }
+  </style>
+</head>
+
+<body>
+  <h1>QCM S2 – Listes</h1>
+  <p class="subtitle small">Entourer la bonne réponse. (1 seule réponse possible)</p>
+
+  <section class="qcm" id="q1">
+    <div class="q-title">Q.1 – On définit :</div>
+    <pre><code>L = [ ["lundi",10,0.87], ["mardi",11,0.82], ["mercredi",12,0.91] ]
+a = L[1][2]</code></pre>
+    <div class="small">Quel est le type de la variable <b>a</b> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q1"> A- nombre entier</label>
+      <label><input type="radio" name="q1"> B- liste</label>
+      <label><input type="radio" name="q1"> C- nombre flottant (nombre décimal)</label>
+      <label><input type="radio" name="q1"> D- chaîne de caractères</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q2">
+    <div class="q-title">Q.2 – On définit :</div>
+    <pre><code>L = [ [1], [1,2], [1,2,3] ]</code></pre>
+    <div class="small">Des égalités suivantes, une seule est fausse. Laquelle ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q2"> A- len(L[0]) == 1</label>
+      <label><input type="radio" name="q2"> B- len(L) == 6</label>
+      <label><input type="radio" name="q2"> C- len(L[2]) == 3</label>
+      <label><input type="radio" name="q2"> D- L[2][2] == 3</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q3">
+    <div class="q-title">Q.3 – On définit :</div>
+    <pre><code>L = [ [1,2,3,4,5],
+      [6,7,8,9,10],
+      [11,12,13,14,15] ]</code></pre>
+    <div class="small">Quelle est la valeur de <code>L[0][2]</code> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q3"> A- 2</label>
+      <label><input type="radio" name="q3"> B- 3</label>
+      <label><input type="radio" name="q3"> C- 11</label>
+      <label><input type="radio" name="q3"> D- 12</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q4">
+    <div class="q-title">Q.4 – La fonction ci-dessous prend en argument deux nombres entiers :</div>
+    <pre><code>def f(a, b):
+    return [a, b]</code></pre>
+    <div class="small">Quel est le type de la valeur renvoyée par un appel à cette fonction ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q4"> A- un entier</label>
+      <label><input type="radio" name="q4"> B- un réel (ou flottant)</label>
+      <label><input type="radio" name="q4"> C- un tuple</label>
+      <label><input type="radio" name="q4"> D- une liste</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q5">
+    <div class="q-title">Q.5 – Dans la console, on tape :</div>
+    <pre><code>[1,4,3] + [2,4,5]</code></pre>
+    <div class="small">Qu’obtient-on ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q5"> A- [3, 8, 8]</label>
+      <label><input type="radio" name="q5"> B- [19]</label>
+      <label><input type="radio" name="q5"> C- [1, 4, 3, 2, 4, 5]</label>
+      <label><input type="radio" name="q5"> D- un message d'erreur car l'addition n'est pas compatible avec les listes</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q6">
+    <div class="q-title">Q.6 – Grille G remplie de 0 :</div>
+    <div class="small">
+      On appelle <b>hauteur</b> le nombre de sous-listes de G,
+      et <b>largeur</b> le nombre d’éléments de chaque sous-liste.
+      Comment peut-on les obtenir ?
+    </div>
+    <div class="choices">
+      <label><input type="radio" name="q6"> A- hauteur = len(G[0]) et largeur = len(G)</label>
+      <label><input type="radio" name="q6"> B- hauteur = len(G) et largeur = len(G[0])</label>
+      <label><input type="radio" name="q6"> C- hauteur = len(G[0]) et largeur = len(G[1])</label>
+      <label><input type="radio" name="q6"> D- hauteur = len(G[1]) et largeur = len(G[0])</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q7">
+    <div class="q-title">Q.7 – Quelle est la valeur de :</div>
+    <pre><code>[ [i for i in range(5)] for j in range(3) ]</code></pre>
+    <div class="choices">
+      <label><input type="radio" name="q7"> A- [[0, 1, 2], [0, 1, 2], [0, 1, 2], [0, 1, 2], [0, 1, 2]]</label>
+      <label><input type="radio" name="q7"> B- [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]</label>
+      <label><input type="radio" name="q7"> C- [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]</label>
+      <label><input type="radio" name="q7"> D- [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5]]</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q8">
+    <div class="q-title">Q.8 – On définit :</div>
+    <pre><code>matrice = [ [1,2,3], [4,5,6], [7,8,9], [10,11,12] ]</code></pre>
+    <div class="small">Quelle est la valeur de <code>matrice[1][2]</code> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q8"> A- 2</label>
+      <label><input type="radio" name="q8"> B- 4</label>
+      <label><input type="radio" name="q8"> C- 6</label>
+      <label><input type="radio" name="q8"> D- 8</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q9">
+    <div class="q-title">Q.9 – Le premier élément d'une liste Python L est noté :</div>
+    <div class="choices">
+      <label><input type="radio" name="q9"> A- L(0)</label>
+      <label><input type="radio" name="q9"> B- L(1)</label>
+      <label><input type="radio" name="q9"> C- L[0]</label>
+      <label><input type="radio" name="q9"> D- L[1]</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q10">
+    <div class="q-title">Q.10 – On construit une matrice par compréhension :</div>
+    <pre><code>M = [ [i*j for j in range(5)] for i in range(5) ]</code></pre>
+    <div class="small">Laquelle des conditions suivantes est vérifiée ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q10"> A- M[4][4] == 16</label>
+      <label><input type="radio" name="q10"> B- M[0][1] == 1</label>
+      <label><input type="radio" name="q10"> C- M[2][3] == 6</label>
+      <label><input type="radio" name="q10"> D- M[1][2] == 3</label>
+    </div>
+  </section>
+
+  <div class="corrige">
+    <b>Corrigé S2 :</b> C ; B ; B ; C ; C ; B ; B ; C ; C ; C
+  </div>
+</body>
+</html>
