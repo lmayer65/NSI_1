@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sujet blanc S2 – Réseaux & Nombres flottants</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.35; margin: 24px; }
+    h1 { margin: 0 0 8px 0; }
+    .meta { color: #444; margin: 0 0 18px 0; }
+    .q { margin: 14px 0 18px 0; padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
+    .q h2 { margin: 0 0 8px 0; font-size: 16px; }
+    .choices { margin: 8px 0 0 0; padding-left: 18px; }
+    .choices li { margin: 4px 0; }
+    pre { background: #f6f6f6; padding: 10px; border-radius: 8px; overflow-x: auto; }
+    .answer-key { margin-top: 22px; padding: 12px; border: 2px solid #111; border-radius: 8px; }
+    .answer-key h2 { margin: 0 0 10px 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(140px, 1fr)); gap: 6px 18px; }
+    .small { font-size: 14px; color: #333; }
+	.page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Sujet blanc S2 – Réseaux & Nombres flottants</h1>
+  <p class="meta small">Première NSI — QCM (10 questions) — 1 seule réponse correcte par question</p>
+
+  <section class="q">
+    <h2>Q.1</h2>
+    <p>Qu’est-ce qui permet de traduire un nom d’hôte en adresse IP ?</p>
+    <ol class="choices" type="A">
+      <li>Un serveur DNS</li>
+      <li>Un serveur DHCP</li>
+      <li>Un pare-feu</li>
+      <li>Un hub</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.2</h2>
+    <p>Quel matériel permet d’interconnecter des réseaux entre eux ?</p>
+    <ol class="choices" type="A">
+      <li>Un routeur</li>
+      <li>Un commutateur (switch)</li>
+      <li>Un serveur</li>
+      <li>Un hub</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.3</h2>
+    <p>Dans le protocole IP :</p>
+    <ol class="choices" type="A">
+      <li>Les données sont envoyées en une seule partie</li>
+      <li>Les données suivent toujours le même chemin</li>
+      <li>Les données arrivent toujours dans l’ordre d’envoi</li>
+      <li>Les données peuvent arriver dans un ordre quelconque</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.4</h2>
+    <p>Dans un établissement scolaire, toutes les ressources locales fonctionnent mais l’accès à Internet est impossible.<br>
+      Quelle est la cause la plus probable ?</p>
+    <ol class="choices" type="A">
+      <li>Un câble Ethernet débranché</li>
+      <li>Un commutateur de salle en panne</li>
+      <li>Un poste élève défectueux</li>
+      <li>La passerelle Internet est indisponible</li>
+    </ol>
+  </section>
+
+ <div class="page-break"></div>
+ 
+  <section class="q">
+    <h2>Q.5</h2>
+    <p>Laquelle de ces écritures ne désigne pas une adresse IP valide ?</p>
+    <ol class="choices" type="A">
+      <li>127.0.0.1</li>
+      <li>207.142.131.245</li>
+      <li>192.168.229.48</li>
+      <li>296.141.2.4</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.6</h2>
+    <p>Que peut-on dire du programme Python suivant ?</p>
+    <pre><code>x = 1.0
+while x != 0.0:
+    x = x - 0.1</code></pre>
+    <ol class="choices" type="A">
+      <li>L’exécution peut ne pas s’arrêter</li>
+      <li>À la fin, <code>x</code> vaut −0.00001</li>
+      <li>À la fin, <code>x</code> vaut 0.00001</li>
+      <li>Une erreur <code>FloatingPointError</code> est levée</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.7</h2>
+    <p>Quelle est l’écriture décimale du nombre binaire <strong>10,001</strong> ?</p>
+    <ol class="choices" type="A">
+      <li>2,001</li>
+      <li>2,125</li>
+      <li>2,25</li>
+      <li>2,5</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.8</h2>
+    <p>Quel nombre décimal possède une écriture finie en base 2 ?</p>
+    <ol class="choices" type="A">
+      <li>0,1</li>
+      <li>0,2</li>
+      <li>0,25</li>
+      <li>0,3</li>
+    </ol>
+  </section>
+
+ <div class="page-break"></div>
+ 
+  <section class="q">
+    <h2>Q.9</h2>
+    <p>Pourquoi certains nombres décimaux ne sont-ils pas représentés exactement en machine ?</p>
+    <ol class="choices" type="A">
+      <li>Manque de mémoire</li>
+      <li>Limitation de Python</li>
+      <li>Écriture binaire infinie</li>
+      <li>Stockage en texte</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.10</h2>
+    <p>Un nombre décimal a une écriture finie en base 2 si et seulement si :</p>
+    <ol class="choices" type="A">
+      <li>il se termine par un 5</li>
+      <li>il peut s’écrire sous forme d’une fraction</li>
+      <li>son dénominateur est une puissance de 2</li>
+      <li>il est strictement positif</li>
+    </ol>
+  </section>
+
+  <section class="answer-key">
+    <h2>Corrigé – Sujet blanc S2</h2>
+    <div class="grid small">
+      <div>Q.1 : <strong>A</strong></div>
+      <div>Q.2 : <strong>A</strong></div>
+      <div>Q.3 : <strong>D</strong></div>
+      <div>Q.4 : <strong>D</strong></div>
+      <div>Q.5 : <strong>D</strong></div>
+      <div>Q.6 : <strong>A</strong></div>
+      <div>Q.7 : <strong>B</strong></div>
+      <div>Q.8 : <strong>C</strong></div>
+      <div>Q.9 : <strong>C</strong></div>
+      <div>Q.10 : <strong>C</strong></div>
+    </div>
+  </section>
+</body>
+</html>
