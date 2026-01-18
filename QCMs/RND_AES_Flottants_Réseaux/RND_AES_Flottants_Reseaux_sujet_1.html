@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QCM – Nombres flottants et Réseaux (S1)</title>
+  <style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11.5px;        /* ajustement fin */
+    line-height: 1.22;
+    margin: 16px;
+  }
+
+  h1 {
+    font-size: 17px;
+    margin: 0 0 6px 0;
+  }
+
+  .meta {
+    font-size: 10.5px;
+    margin: 0 0 10px 0;
+    color: #444;
+  }
+
+  .q {
+    margin: 6px 0 8px 0;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    break-inside: avoid;     /* empêche coupure question */
+  }
+
+  .q h2 {
+    font-size: 12.5px;
+    margin: 0 0 4px 0;
+  }
+
+  .choices {
+    margin: 2px 0 0 0;
+    padding-left: 14px;
+  }
+
+  .choices li {
+    margin: 1px 0;
+  }
+
+  pre {
+    font-size: 10.5px;
+    padding: 5px;
+    margin: 4px 0;
+    background: #f6f6f6;
+    border-radius: 5px;
+  }
+
+  /* --- CORRIGÉ --- */
+  .answer-key {
+    page-break-before: always;   /* ← clé du problème */
+    break-before: page;
+    margin-top: 0;
+    padding: 8px;
+    border: 2px solid #111;
+    border-radius: 6px;
+  }
+
+  .answer-key h2 {
+    font-size: 14px;
+    margin: 0 0 8px 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 4px 12px;
+  }
+
+  .small {
+    font-size: 10.5px;
+    color: #333;
+  }
+</style>
+
+</head>
+
+<body>
+  <h1>QCM – Nombres flottants et Réseaux (S1)</h1>
+  <p class="meta small">Première NSI — QCM (10 questions) — 1 seule réponse correcte par question</p>
+
+  <section class="q">
+    <h2>Q.1</h2>
+    <p>Dans un terminal, à quoi sert la commande <code>traceroute</code> ?</p>
+    <ol class="choices" type="A">
+      <li>À afficher un itinéraire routier entre deux villes</li>
+      <li>À tester la connectivité avec une machine</li>
+      <li>À afficher le chemin suivi par des paquets IP</li>
+      <li>À suivre pas à pas l’exécution d’un programme</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.2</h2>
+    <p>Parmi les adresses suivantes, laquelle est une <strong>adresse IP non valide</strong> ?</p>
+    <ol class="choices" type="A">
+      <li>1.2.3.4</li>
+      <li>192.168.23.242</li>
+      <li>127.3.87.256</li>
+      <li>10.1.64.42</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.3</h2>
+    <p>Quel protocole permet d’attribuer dynamiquement une adresse IP à une machine sur un réseau ?</p>
+    <ol class="choices" type="A">
+      <li>UDP</li>
+      <li>HTTP</li>
+      <li>DHCP</li>
+      <li>DNS</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.4</h2>
+    <p>Quel matériel permet d’interconnecter des ordinateurs entre eux au sein d’un réseau local ?</p>
+    <ol class="choices" type="A">
+      <li>Un routeur</li>
+      <li>Un commutateur (switch)</li>
+      <li>Un serveur</li>
+      <li>Un pare-feu</li>
+    </ol>
+  </section>
+  
+    <div class="page-break"></div>
+
+  <section class="q">
+    <h2>Q.5</h2>
+    <p>Quelle est l’utilité principale de la commande <code>ping</code> ?</p>
+    <ol class="choices" type="A">
+      <li>Créer un réseau privé virtuel</li>
+      <li>Tester si la connexion peut être établie avec une machine distante</li>
+      <li>Afficher la route suivie par un paquet</li>
+      <li>Mesurer la puissance d’une machine distante</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.6</h2>
+    <p>Quelle est l’écriture décimale du nombre binaire <strong>10,011</strong> ?</p>
+    <ol class="choices" type="A">
+      <li>2,125</li>
+      <li>2,25</li>
+      <li>2,375</li>
+      <li>2,5</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.7</h2>
+    <p>Quel nombre décimal possède une <strong>écriture finie en base 2</strong> ?</p>
+    <ol class="choices" type="A">
+      <li>0,1</li>
+      <li>0,2</li>
+      <li>0,25</li>
+      <li>0,3</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.8</h2>
+    <p>Pourquoi certains nombres décimaux ne sont-ils pas représentés exactement en machine ?</p>
+    <ol class="choices" type="A">
+      <li>À cause d’un manque de mémoire</li>
+      <li>À cause d’une limitation du langage Python</li>
+      <li>Parce que leur écriture binaire est infinie</li>
+      <li>Parce qu’ils sont stockés sous forme de chaînes</li>
+    </ol>
+  </section>
+  
+    <div class="page-break"></div>
+
+  <section class="q">
+    <h2>Q.9</h2>
+    <p>Quel est le résultat de l’instruction Python suivante ?</p>
+    <pre><code>print(0.1 + 0.2 == 0.3)</code></pre>
+    <ol class="choices" type="A">
+      <li><code>True</code></li>
+      <li><code>False</code></li>
+      <li><code>0.3</code></li>
+      <li>Erreur d’exécution</li>
+    </ol>
+  </section>
+
+  <section class="q">
+    <h2>Q.10</h2>
+    <p>Un nombre décimal a une écriture finie en base 2 <strong>si et seulement si</strong> :</p>
+    <ol class="choices" type="A">
+      <li>il se termine par un 5</li>
+      <li>il peut s’écrire sous forme d’une fraction</li>
+      <li>son dénominateur est une puissance de 2</li>
+      <li>il est strictement positif</li>
+    </ol>
+  </section>
+  
+    <div class="page-break"></div>
+
+  <section class="answer-key">
+    <h2>Corrigé – QCM S1</h2>
+    <div class="grid small">
+      <div>Q.1 : <strong>C</strong></div>
+      <div>Q.2 : <strong>C</strong></div>
+      <div>Q.3 : <strong>C</strong></div>
+      <div>Q.4 : <strong>B</strong></div>
+      <div>Q.5 : <strong>B</strong></div>
+      <div>Q.6 : <strong>C</strong></div>
+      <div>Q.7 : <strong>C</strong></div>
+      <div>Q.8 : <strong>C</strong></div>
+      <div>Q.9 : <strong>B</strong></div>
+      <div>Q.10 : <strong>C</strong></div>
+    </div>
+  </section>
+</body>
+</html>
