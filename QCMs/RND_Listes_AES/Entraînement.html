@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>QCM – Architecture système et listes (NSI Première)</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      margin: 20px;
+      background: #fafafa;
+      color: #111;
+    }
+    h1{ font-size: 1.6rem; margin-bottom: 0.2rem; }
+    h2{ font-size: 1.2rem; margin-top: 28px; margin-bottom: 10px; }
+    .subtitle{ margin-top: 0; color:#444; }
+    .qcm{
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:10px;
+      padding:16px 18px;
+      margin:14px 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .q-title{ font-weight: bold; margin-bottom: 8px; }
+    .choices label{
+      display:block;
+      padding:6px 8px;
+      margin:4px 0;
+      border-radius:6px;
+      cursor:pointer;
+    }
+    .choices label:hover{ background:#f1f5ff; }
+    .corrige{
+      margin-top: 24px;
+      padding: 12px 14px;
+      background: #eef7ee;
+      border: 1px solid #cde8cd;
+      border-radius: 8px;
+    }
+    .small{ font-size: 0.95rem; color:#333; }
+    pre{
+      background:#f6f6f6;
+      padding:8px 10px;
+      border-radius:6px;
+      overflow:auto;
+    }
+    code{ font-family: "Consolas","Courier New",monospace; }
+  </style>
+</head>
+
+<body>
+  <h1>QCM – Architecture système et listes</h1>
+  <p class="subtitle small">NSI Première – 20 questions (1 seule réponse possible)</p>
+
+  <h2>Partie A – Architecture matérielle et systèmes d’exploitation</h2>
+
+  <section class="qcm" id="q1">
+    <div class="q-title">Q.1 – Qu'est-ce qui permet de traduire un nom d'hôte en adresse IP ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q1"> A- un serveur DNS</label>
+      <label><input type="radio" name="q1"> B- un serveur DHCP</label>
+      <label><input type="radio" name="q1"> C- un pare-feu</label>
+      <label><input type="radio" name="q1"> D- un hub</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q2">
+    <div class="q-title">Q.2 – Quel est le rôle principal d’un système d’exploitation ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q2"> A- Compiler les programmes</label>
+      <label><input type="radio" name="q2"> B- Gérer les ressources matérielles de l’ordinateur</label>
+      <label><input type="radio" name="q2"> C- Traduire le langage Python</label>
+      <label><input type="radio" name="q2"> D- Stocker les fichiers utilisateurs</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q3">
+    <div class="q-title">Q.3 – Quel composant exécute les instructions d’un programme ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q3"> A- la mémoire RAM</label>
+      <label><input type="radio" name="q3"> B- le processeur</label>
+      <label><input type="radio" name="q3"> C- le disque dur</label>
+      <label><input type="radio" name="q3"> D- la carte graphique</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q4">
+    <div class="q-title">Q.4 – Quel est le plus grand entier positif non signé représentable sur 16 bits ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q4"> A- 2<sup>15</sup></label>
+      <label><input type="radio" name="q4"> B- 2<sup>15</sup> - 1</label>
+      <label><input type="radio" name="q4"> C- 2<sup>16</sup></label>
+      <label><input type="radio" name="q4"> D- 2<sup>16</sup> - 1</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q5">
+    <div class="q-title">Q.5 – Quel est le rôle de la mémoire RAM ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q5"> A- stocker définitivement les fichiers</label>
+      <label><input type="radio" name="q5"> B- exécuter les instructions machine</label>
+      <label><input type="radio" name="q5"> C- stocker temporairement les programmes en cours d’exécution</label>
+      <label><input type="radio" name="q5"> D- gérer les connexions réseau</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q6">
+    <div class="q-title">Q.6 – Parmi les éléments suivants, lequel est un système d’exploitation ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q6"> A- Python</label>
+      <label><input type="radio" name="q6"> B- Linux</label>
+      <label><input type="radio" name="q6"> C- HTML</label>
+      <label><input type="radio" name="q6"> D- SQL</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q7">
+    <div class="q-title">Q.7 – Quel périphérique permet de connecter plusieurs machines dans un réseau local ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q7"> A- un switch</label>
+      <label><input type="radio" name="q7"> B- un disque dur</label>
+      <label><input type="radio" name="q7"> C- une barrette RAM</label>
+      <label><input type="radio" name="q7"> D- un processeur</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q8">
+    <div class="q-title">Q.8 – Dans un ordinateur, les données sont représentées principalement en :</div>
+    <div class="choices">
+      <label><input type="radio" name="q8"> A- base 2</label>
+      <label><input type="radio" name="q8"> B- base 8</label>
+      <label><input type="radio" name="q8"> C- base 10</label>
+      <label><input type="radio" name="q8"> D- base 16</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q9">
+    <div class="q-title">Q.9 – Parmi les éléments suivants, lequel est un périphérique d’entrée ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q9"> A- clavier</label>
+      <label><input type="radio" name="q9"> B- écran</label>
+      <label><input type="radio" name="q9"> C- imprimante</label>
+      <label><input type="radio" name="q9"> D- haut-parleurs</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q10">
+    <div class="q-title">Q.10 – Quel composant permet de stocker durablement les données même lorsque l’ordinateur est éteint ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q10"> A- la mémoire RAM</label>
+      <label><input type="radio" name="q10"> B- le disque dur</label>
+      <label><input type="radio" name="q10"> C- le processeur</label>
+      <label><input type="radio" name="q10"> D- la mémoire cache</label>
+    </div>
+  </section>
+
+  <h2>Partie B – Listes en Python</h2>
+
+  <section class="qcm" id="q11">
+    <div class="q-title">Q.11 – Le premier élément d'une liste Python <code>L</code> est noté :</div>
+    <div class="choices">
+      <label><input type="radio" name="q11"> A- L(0)</label>
+      <label><input type="radio" name="q11"> B- L(1)</label>
+      <label><input type="radio" name="q11"> C- L[0]</label>
+      <label><input type="radio" name="q11"> D- L[1]</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q12">
+    <div class="q-title">Q.12 – On définit :</div>
+    <pre><code>T = [7*n for n in range(10)]</code></pre>
+    <div class="small">Quelle est la valeur de <code>T[7]</code> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q12"> A- 42</label>
+      <label><input type="radio" name="q12"> B- 49</label>
+      <label><input type="radio" name="q12"> C- 56</label>
+      <label><input type="radio" name="q12"> D- 70</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q13">
+    <div class="q-title">Q.13 – On définit :</div>
+    <pre><code>L = [[1,2,3],[4,5,6],[7,8,9]]</code></pre>
+    <div class="small">Quelle est la valeur de <code>L[1][2]</code> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q13"> A- 2</label>
+      <label><input type="radio" name="q13"> B- 4</label>
+      <label><input type="radio" name="q13"> C- 6</label>
+      <label><input type="radio" name="q13"> D- 8</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q14">
+    <div class="q-title">Q.14 – Quelle est la valeur de l’expression :</div>
+    <pre><code>[n*n for n in range(10)]</code></pre>
+    <div class="choices">
+      <label><input type="radio" name="q14"> A- [0,1,4,9,16,25,36,49,64,81]</label>
+      <label><input type="radio" name="q14"> B- [1,4,9,16,25,36,49,64,81]</label>
+      <label><input type="radio" name="q14"> C- [0,1,4,9,16,25,36,49,64,81,100]</label>
+      <label><input type="radio" name="q14"> D- [1,2,3,4,5,6,7,8,9,10]</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q15">
+    <div class="q-title">Q.15 – On exécute :</div>
+    <pre><code>t = [1,2,3,4,5,6,7,8,9]
+v = [c for c in t if c%3 == 0]</code></pre>
+    <div class="small">Quelle est la valeur de <code>v</code> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q15"> A- [1,4,7]</label>
+      <label><input type="radio" name="q15"> B- [3,6,9]</label>
+      <label><input type="radio" name="q15"> C- [9]</label>
+      <label><input type="radio" name="q15"> D- [1,2,3]</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q16">
+    <div class="q-title">Q.16 – On définit :</div>
+    <pre><code>L = [15,17,12,23]
+L[2] = 25</code></pre>
+    <div class="small">Quelle est la valeur finale de <code>L</code> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q16"> A- [15,25,12,23]</label>
+      <label><input type="radio" name="q16"> B- [15,17,25,23]</label>
+      <label><input type="radio" name="q16"> C- [15,17,12,25,23]</label>
+      <label><input type="radio" name="q16"> D- [15,25,17,23]</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q17">
+    <div class="q-title">Q.17 – On définit :</div>
+    <pre><code>L = ["do","ré","mi","fa","sol","la","si"]</code></pre>
+    <div class="small">Quel est l’index de <code>"mi"</code> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q17"> A- 1</label>
+      <label><input type="radio" name="q17"> B- 2</label>
+      <label><input type="radio" name="q17"> C- 3</label>
+      <label><input type="radio" name="q17"> D- 4</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q18">
+    <div class="q-title">Q.18 – On exécute :</div>
+    <pre><code>resultat = [i*2 for i in range(10)]</code></pre>
+    <div class="small">Quelle est la valeur de <code>resultat</code> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q18"> A- [0,1,2,3,4,5,6,7,8,9]</label>
+      <label><input type="radio" name="q18"> B- [0,2,4,6,8,10,12,14,16,18]</label>
+      <label><input type="radio" name="q18"> C- [2,4,6,8,10]</label>
+      <label><input type="radio" name="q18"> D- [0,2,4,6,8]</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q19">
+    <div class="q-title">Q.19 – On exécute :</div>
+    <pre><code>L = [i for i in range(12) if i%3 == 0]</code></pre>
+    <div class="small">Quelle est la valeur de <code>L</code> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q19"> A- [0,3,6,9,12]</label>
+      <label><input type="radio" name="q19"> B- [0,3,6,9]</label>
+      <label><input type="radio" name="q19"> C- [3,6,9]</label>
+      <label><input type="radio" name="q19"> D- [0,1,2,3]</label>
+    </div>
+  </section>
+
+  <section class="qcm" id="q20">
+    <div class="q-title">Q.20 – On exécute :</div>
+    <pre><code>def quoi(liste):
+    maListe = []
+    for i in range(len(liste)):
+        maListe.append(liste[i][0])
+    return maListe
+
+L = [[5,8,12,1],[20,11,3,8],[3,12,1,4],[2,13,17,3]]
+m = quoi(L)</code></pre>
+    <div class="small">Que contient <code>m</code> ?</div>
+    <div class="choices">
+      <label><input type="radio" name="q20"> A- 26</label>
+      <label><input type="radio" name="q20"> B- 30</label>
+      <label><input type="radio" name="q20"> C- [5,20,3,2]</label>
+      <label><input type="radio" name="q20"> D- [5,8,12,1]</label>
+    </div>
+  </section>
+
+  <div class="corrige">
+    <b>Corrigé :</b> A ; B ; B ; D ; C ; B ; A ; A ; A ; B ; C ; B ; C ; A ; B ; B ; B ; B ; B ; C
+  </div>
+</body>
+</html>
